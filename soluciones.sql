@@ -10,8 +10,7 @@
 
 SELECT p.producto_id, p.nombre, p.categoria, p.precio, v.venta_id FROM productos AS p
 LEFT JOIN ventas AS v
-ON p.producto_id = v.producto_id
-WHERE v.venta_id IS NULL; 
+ON p.producto_id = v.producto_id; 
 
 -- ── CONSULTA 2: RIGHT JOIN ────────────────
 -- Pregunta de negocio: ¿Existen ventas registradas con productos
@@ -30,4 +29,4 @@ WHERE p.producto_id IS NULL;
 
 SELECT * FROM productos AS p
 FULL OUTER JOIN ventas AS v
-ON p.producto_id = v.producto_id
+ON p.producto_id = v.producto_id;
